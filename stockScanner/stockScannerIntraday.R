@@ -75,7 +75,6 @@ findAllGaps<-function(){
 # Check if stock s is rising with last volume larger than the volume SMA
 # Return a one-line data frame containing the information if yes.
 # Otherwise return nothing.
-# Author: Dalimeow
 isAnyVolIncSMAnStep.intraday<-function(s="0002.HK", nRiseBar = 1, nStepSMA=5){
   r<-isRising.intraday(s, bars=nRiseBar)
   q<-readHistory.intraday(s)
@@ -99,7 +98,6 @@ isAnyVolIncSMAnStep.intraday<-function(s="0002.HK", nRiseBar = 1, nStepSMA=5){
 
 # Finds the rising stocks with last volume larger than the volume SMA
 # Returns a data frame containing the information.
-# Author: Dalimeow
 # Got the following error in the morning of 20170202:
 # Error in -m$VolIncTimes : invalid argument to unary operator
 # Calls: AllVolIncSMAnStep.intraday -> order
